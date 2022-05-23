@@ -7,8 +7,8 @@
 }
 
 @font-face {
-    font-family: trueLies;
-    src: url(../fonts/True\ Lies.ttf);
+    font-family: valorant;
+    src: url(../fonts/Valorant\ Font.ttf);
 }
 
 .back-to-top {
@@ -67,20 +67,12 @@
 
 
 /*** Navbar ***/
-.navbar .dropdown-toggle::after {
-    border: none;
-    content: "\f107";
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    vertical-align: middle;
-    margin-left: 8px;
-}
 
 .navbar .navbar-nav .nav-link {
     margin-right: 30px;
     padding: 40px 0;
     color: var(--light);
-    font-family: 'Oswald', sans-serif;
+    font-family: 'valorant';
     font-size: 18px;
     font-weight: 600;
     text-transform: uppercase;
@@ -93,6 +85,7 @@
 }
 
 .nombreEquipo {
+    font-family: 'valorant';
     color: var(--primary);
 }
 
@@ -118,27 +111,10 @@
     .navbar.shadow-sm .navbar-nav .nav-link {
         padding: 20px 0;
     }
-
-    .navbar .nav-item .dropdown-menu {
-        display: block;
-        border: none;
-        margin-top: 0;
-        top: 150%;
-        opacity: 0;
-        visibility: hidden;
-        transition: .5s;
-    }
-
-    .navbar .nav-item:hover .dropdown-menu {
-        top: 100%;
-        visibility: visible;
-        transition: .5s;
-        opacity: 1;
-    }
 }
 
-
 /*** Header ***/
+
 .carousel-caption {
     top: 0;
     left: 0;
@@ -146,14 +122,13 @@
     bottom: 0;
     background: rgba(0, 0, 0, .85);
     z-index: 1;
+    font-family: 'valorant';
 }
 
 .carousel-control-prev,
 .carousel-control-next {
     width: 10%;
 }
-
-
 
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
@@ -313,7 +288,7 @@
 .footer .btn.btn-link::before {
     position: relative;
     content: "\f105";
-    font-family: "Font Awesome 5 Free";
+    font-family: "valorant";
     font-weight: 900;
     margin-right: 10px;
 }
@@ -341,4 +316,12 @@
 .logoPequeño {
     width: 3vw;
     border-radius: 10px;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'valorant';
+}
+
+div {
+    font-family: 'valorant';
 }
