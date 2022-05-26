@@ -369,3 +369,12 @@ table {
     color: white;
     font-weight: bold;
 }
+
+th {
+    border-bottom: #F62F52 solid;
+    color: #000000;
+}
+
+tr {
+    border-bottom: #191C24  solid 1px;
+}
