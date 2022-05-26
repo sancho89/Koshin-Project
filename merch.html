@@ -26,6 +26,9 @@
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="css/stylesheet" href="css/normalize.css">
+    <link rel="css/stylesheet" href="css/skeleton.css">
+    <link rel="css/stylesheet" href="css/custom.css">
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
@@ -58,9 +61,10 @@
                  <a href="staff.html" class="nav-item nav-link">Staff</a>
                  <a href="merch.html" class="nav-item nav-link active">merch</a>
                  <a href="contact.html" class="nav-item nav-link">Contacto</a>
+                 <a href="#" class="nav-item nav-link"></a>
+
      </nav>
      <!-- Navbar End -->
-
 
     <!-- Page Header Start -->
     <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
@@ -75,7 +79,49 @@
         </div>
     </div>
     <!-- Page Header End -->
+    
+    <div class="offcanvas offcanvas-start" id="demo">
+        <div class="offcanvas-header">
+          <h1 class="offcanvas-title">Heading</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <table>
+            <tr>
+            <th>Imagen</th>
+            <th>Nombre</th>
+            <th>Precio</th>
+            <th>Cantidad</th>
+            </tr>
+            <tr>
+            <td>Peter</td>
+            <td>Griffin</td>
+            <td>$100</td>
+            </tr>
+            <tr>
+            <td>Lois</td>
+            <td>Griffin</td>
+            <td>$150</td>
+            </tr>
+            <tr>
+            <td>Joe</td>
+            <td>Swanson</td>
+            <td>$300</td>
+            </tr>
+            <tr>
+            <td>Cleveland</td>
+            <td>Brown</td>
+            <td>$250</td>
+            
+            </tr>
+            
+          </table>
+      </div>
 
+      <div class="container-fluid mt-3">
+        <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo">
+          Lista Carrito
+        </button>
+      </div>
 
     <!-- Merch Start -->
     <div class="container-xxl py-5">
