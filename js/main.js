@@ -63,7 +63,9 @@
         if(e.target.value.length > 0){
 
             const error = document.querySelector('p.error');
+            if(error){
             error.remove();
+            }
                 
             
             console.log('Si hay texto')
@@ -81,7 +83,9 @@
             if(er.test( e.target.value)) {
 
                 const error = document.querySelector('p.error');
-                error.remove();
+                if(error){
+                    error.remove();
+                }
                 console.log('email valido');
             }else {
                 e.target.style.borderBottomColor = 'red';
@@ -89,6 +93,11 @@
                 
             }
         }
+    if( er.test (email.value)  && asunto.value !== '' && mensaje.value !== '' && nombre.value !== '') {
+        btnEnviar.disabled = false;
+        btnEnviar.classList.remove('cursor-not-allowed')
+        }
+    
     }
 
     function mostrarError(mensaje){
