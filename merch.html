@@ -9,12 +9,13 @@
     <meta content="" name="description">
 
     <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+    <link href="#">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Oswald:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Oswald:wght@600&display=swap"
+        rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
@@ -26,9 +27,6 @@
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link rel="css/stylesheet" href="css/normalize.css">
-    <link rel="css/stylesheet" href="css/skeleton.css">
-    <link rel="css/stylesheet" href="css/custom.css">
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
@@ -36,7 +34,8 @@
 
 <body>
     <!-- Spinner Start -->
-    <div id="spinner" class="show bg-dark position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+    <div id="spinner"
+        class="show bg-dark position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
         <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
             <span class="sr-only">Loading...</span>
         </div>
@@ -45,26 +44,27 @@
 
 
     <!-- Navbar Start -->
-    <nav class="navbar navbar-expand-lg bg-secondary navbar-dark sticky-top py-lg-0 px-lg-5 wow fadeIn" data-wow-delay="0.1s">
+    <nav class="navbar navbar-expand-lg bg-secondary navbar-dark sticky-top py-lg-0 px-lg-5 wow fadeIn"
+        data-wow-delay="0.1s">
         <a href="index.html">
-        <img class="logoPequeño" src="img/Logo_pequeño.jpg"></a>
-         <a href="index.html" class="navbar-brand ms-4 ms-lg-0">  
-             <h1 class="nombreEquipo text-uppercase" class="mb-0 text-primary "><i class="me-3"></i>Koshin Esports</h1>
-         </a>
-         <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-             <span class="navbar-toggler-icon"></span>
-         </button>
-         <div class="collapse navbar-collapse" id="navbarCollapse">
-             <div class="navbar-nav ms-auto p-4 p-lg-0">
-                 <a href="index.html" class="nav-item nav-link">Home</a>
-                 <a href="equipos.html" class="nav-item nav-link">equipos</a>
-                 <a href="staff.html" class="nav-item nav-link">Staff</a>
-                 <a href="merch.html" class="nav-item nav-link active">merch</a>
-                 <a href="contact.html" class="nav-item nav-link">Contacto</a>
-                 <a href="#" class="nav-item nav-link"></a>
+            <img class="logoPequeño" src="img/Logo_pequeño.jpg"></a>
+        <a href="index.html" class="navbar-brand ms-4 ms-lg-0">
+            <h1 class="nombreEquipo text-uppercase" class="mb-0 text-primary "><i class="me-3"></i>Koshin Esports</h1>
+        </a>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <a href="index.html" class="nav-item nav-link">Home</a>
+                <a href="equipos.html" class="nav-item nav-link">equipos</a>
+                <a href="staff.html" class="nav-item nav-link">Staff</a>
+                <a href="merch.html" class="nav-item nav-link active">merch</a>
+                <a href="contact.html" class="nav-item nav-link">Contacto</a>
+                <a href="#" class="nav-item nav-link"></a>
 
-     </nav>
-     <!-- Navbar End -->
+    </nav>
+    <!-- Navbar End -->
 
     <!-- Page Header Start -->
     <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
@@ -79,111 +79,116 @@
         </div>
     </div>
     <!-- Page Header End -->
-    
+
     <div class="offcanvas offcanvas-start" id="carrito">
         <div class="offcanvas-header">
-          <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
         </div>
-        <table>
-            <tr>
-            <th><b>Imagen</b></th>
-            <th><b>Nombre</b></th>
-            <th><b>Precio</b></th>
-            <th><b>Cantidad</b></th>
-            </tr>
-            <tr>
-                <td><b>Imagen</b></td>
-                <td><b>Nombre</b></td>
-                <td><b>Precio</b></td>
-                <td><b>Cantidad</b></td>
-            </tr>
+        <table id="lista-carrito" class="u-full-width">
+            <thead>
+                <tr>
+                    <th><b>Imagen</b></th>
+                    <th><b>Nombre</b></th>
+                    <th><b>Precio</b></th>
+                    <th><b>Cantidad</b></th>
+                    <th>
+                </tr>
+            </thead>
+            <tbody></tbody>
         </table>
-      </div>
+        <a href="#" id="vaciar-carrito" class="button u-full-width">Vaciar Carrito</a>
+    </div>
 
-      <div class="container-fluid mt-3">
+    <div class="container-fluid mt-3">
         <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#carrito">
-          Carrito
+            Carrito
         </button>
-      </div>
+    </div>
 
     <!-- Merch Start -->
     <div class="container-xxl py-5">
         <div class="container">
             <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
-            
+
                 <h1 class="text-uppercase">Que puedes comprar</h1>
             </div>
-            <div class="row g-4">
+            <div id="lista-articulos" class="row g-4">
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="service-item position-relative overflow-hidden bg-secondary d-flex h-100 p-5 ps-0">
-                        <div class="d-flex flex-shrink-0 align-items-center justify-content-center" style="width: 180px; height: 180px;">
-                            <img class="img-fluid" src="img/ahri" alt="">
+                        <div class="d-flex flex-shrink-0 align-items-center justify-content-center"
+                            style="width: 180px; height: 180px;">
+                            <img class="img-fluid" src="img/ahri">
                         </div>
                         <div class="ps-4">
                             <h3 class="text-uppercase mb-3">Sudadera Ahri</h3>
                             <span class="text-uppercase text-primary">35 €</span>
                         </div>
-                        <a class="btn btn-square" href=""><i class="fa fa-plus text-primary"></i></a>
+                        <a class="btn btn-square" href="#"><i class="fa fa-plus text-primary button input agregar-carrito" data-id="1"></i></a>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="service-item position-relative overflow-hidden bg-secondary d-flex h-100 p-5 ps-0">
-                        <div class="d-flex flex-shrink-0 align-items-center justify-content-center" style="width: 180px; height: 180px;">
-                            <img class="img-fluid" src="img/aphelios.jpg" alt="">
+                        <div class="d-flex flex-shrink-0 align-items-center justify-content-center"
+                            style="width: 180px; height: 180px;">
+                            <img class="img-fluid" src="img/aphelios.jpg">
                         </div>
                         <div class="ps-4">
                             <h3 class="text-uppercase mb-3">Camiseta Aphelios</h3>
                             <span class="text-uppercase text-primary">15 €</span>
                         </div>
-                        <a class="btn btn-square" href=""><i class="fa fa-plus text-primary"></i></a>
+                        <a class="btn btn-square" href="#"><i class="fa fa-plus text-primary button input agregar-carrito" data-id="2"></i></a>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="service-item position-relative overflow-hidden bg-secondary d-flex h-100 p-5 ps-0">
-                        <div class="bg-dark d-flex flex-shrink-0 align-items-center justify-content-center" style="width: 180px; height: 180px;">
-                            <img class="img-fluid" src="img/calcentines.jpg" alt="">
+                        <div class="bg-dark d-flex flex-shrink-0 align-items-center justify-content-center"
+                            style="width: 180px; height: 180px;">
+                            <img class="img-fluid" src="img/calcentines.jpg">
                         </div>
                         <div class="ps-4">
-                            <h3 class="text-uppercase mb-3">calcetines</h3>
+                            <h3 class="text-uppercase mb-3">Calcetines</h3>
                             <span class="text-uppercase text-primary">5 €</span>
                         </div>
-                        <a class="btn btn-square" href=""><i class="fa fa-plus text-primary"></i></a>
+                        <a class="btn btn-square" href="#"><i class="fa fa-plus text-primary button input agregar-carrito" data-id="3"></i></a>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="service-item position-relative overflow-hidden bg-secondary d-flex h-100 p-5 ps-0">
-                        <div class="bg-dark d-flex flex-shrink-0 align-items-center justify-content-center" style="width: 180px; height: 180px;">
+                        <div class="bg-dark d-flex flex-shrink-0 align-items-center justify-content-center"
+                            style="width: 180px; height: 180px;">
                             <img class="img-fluid" src="img/ezreal.jpg" alt="">
                         </div>
                         <div class="ps-4">
-                            <h3 class="text-uppercase mb-3">Sudadera ezreal</h3>
+                            <h3 class="text-uppercase mb-3">Sudadera Ezreal</h3>
                             <span class="text-uppercase text-primary">35 €</span>
                         </div>
-                        <a class="btn btn-square" href=""><i class="fa fa-plus text-primary"></i></a>
+                        <a class="btn btn-square" href="#"><i class="fa fa-plus text-primary button input agregar-carrito" data-id="4"></i></a>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="service-item position-relative overflow-hidden bg-secondary d-flex h-100 p-5 ps-0">
-                        <div class="bg-dark d-flex flex-shrink-0 align-items-center justify-content-center" style="width: 180px; height: 180px;">
-                            <img class="img-fluid" src="img/pantaloneskata.jpg" alt="">
+                        <div class="bg-dark d-flex flex-shrink-0 align-items-center justify-content-center"
+                            style="width: 180px; height: 180px;">
+                            <img class="img-fluid" src="img/pantaloneskata.jpg">
                         </div>
                         <div class="ps-4">
-                            <h3 class="text-uppercase mb-3">Pantalones katarina</h3>
+                            <h3 class="text-uppercase mb-3">Pantalones Kata</h3>
                             <span class="text-uppercase text-primary">20 €</span>
                         </div>
-                        <a class="btn btn-square" href=""><i class="fa fa-plus text-primary"></i></a>
+                        <a class="btn btn-square" href="#"><i class="fa fa-plus text-primary button input agregar-carrito" data-id="5"></i></a>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="service-item position-relative overflow-hidden bg-secondary d-flex h-100 p-5 ps-0">
-                        <div class="bg-dark d-flex flex-shrink-0 align-items-center justify-content-center" style="width: 180px; height: 180px;">
-                            <img class="img-fluid" src="img/ekko.jpg" alt="">
+                        <div class="bg-dark d-flex flex-shrink-0 align-items-center justify-content-center"
+                            style="width: 180px; height: 180px;">
+                            <img class="img-fluid" src="img/ekko.jpg">
                         </div>
                         <div class="ps-4">
-                            <h3 class="text-uppercase mb-3">camiseta ekko</h3>
+                            <h3 class="text-uppercase mb-3">Camiseta Ekko</h3>
                             <span class="text-uppercase text-primary">15 €</span>
                         </div>
-                        <a class="btn btn-square" href=""><i class="fa fa-plus text-primary"></i></a>
+                        <a class="btn btn-square" href="#"><i class="fa fa-plus text-primary button input agregar-carrito" data-id="6"></i></a>
                     </div>
                 </div>
             </div>
@@ -206,17 +211,20 @@
                     <p class="text-primary">Estudiante</p>
                     <span class="fs-5">Servicio impecable, me llegaron los productos al día siguiente. Genial!</span>
                 </div>
-                <div class="testimonial-item text-center" data-dot="<img class='img-fluid' src='img/carlos.png' alt=''>">
+                <div class="testimonial-item text-center"
+                    data-dot="<img class='img-fluid' src='img/carlos.png' alt=''>">
                     <h4 class="text-uppercase">Carlos</h4>
                     <p class="text-primary">Lapidero</p>
-                    <span class="fs-5">El servicio de entrega perfecto, aunque me esperaba mejor calidad de los productos.</span>
+                    <span class="fs-5">El servicio de entrega perfecto, aunque me esperaba mejor calidad de los
+                        productos.</span>
                 </div>
                 <div class="testimonial-item text-center" data-dot="<img class='img-fluid' src='img/lucas.png' alt=''>">
                     <h4 class="text-uppercase">Lucas</h4>
                     <p class="text-primary">Streamer</p>
-                    <span class="fs-5">No me llegó en el plazo estipulado pero no es culpa de Koshin, fue un problema con la empresa de transporte.</span>
+                    <span class="fs-5">No me llegó en el plazo estipulado pero no es culpa de Koshin, fue un problema
+                        con la empresa de transporte.</span>
                 </div>
-            </div>      
+            </div>
         </div>
     </div>
     <!-- Testimonial End -->
@@ -254,17 +262,23 @@
                     <a class="btn btn-link" href="contact.html">Contactanos</a>
                     <a class="btn btn-link" href="merch.html">Merchandising</a>
                     <a class="btn btn-link" href="staff.html">Staff</a>
-                   
+
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <h4 class="text-uppercase mb-4">Redes sociales</h4>
-                    <div class="position-relastrapntrol border-0 w-100 py-3 ps-4 pe-5" type="text" placeholder="Tu email">
-                        <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">Registrarse</button>
+                    <div class="position-relastrapntrol border-0 w-100 py-3 ps-4 pe-5" type="text"
+                        placeholder="Tu email">
+                        <button type="button"
+                            class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">Registrarse</button>
                     </div>
                     <div class="d-flex pt-1 m-n1">
-                        <a class="btn btn-lg-square btn-dark text-primary m-1" href="https://twitter.com/KoshinEsports?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-lg-square btn-dark text-primary m-1" href="https://www.instagram.com/accounts/login/?next=/ko___shin_/"><i class="fab fa-instagram"></i></a>
-                        
+                        <a class="btn btn-lg-square btn-dark text-primary m-1"
+                            href="https://twitter.com/KoshinEsports?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><i
+                                class="fab fa-twitter"></i></a>
+                        <a class="btn btn-lg-square btn-dark text-primary m-1"
+                            href="https://www.instagram.com/accounts/login/?next=/ko___shin_/"><i
+                                class="fab fa-instagram"></i></a>
+
                     </div>
                 </div>
             </div>
@@ -291,6 +305,7 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    <script src="js/merch.js"></script>
 </body>
 
 </html>

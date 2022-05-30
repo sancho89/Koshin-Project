@@ -361,6 +361,8 @@ table {
     margin:10px 0;
 }
 
+
+
 .borrar-curso {
     background-color: red;
     border-radius: 50%;
@@ -372,9 +374,10 @@ table {
 
 th {
     border-bottom: #F62F52 solid;
-    color: #000000;
+    color: #505050;
+    text-align: center;
 }
 
-tr {
-    border-bottom: #191C24  solid 1px;
+td {
+    text-align: center;
 }
