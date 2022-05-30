@@ -37,7 +37,9 @@ function eliminarArticulo(e) {
         const articuloId = e.target.getAttribute('data-id');
 
         // Eliminar del array por data-id
-        articulosCarrito = articulosCarrito.filter(articulo => articulo.id === articuloId)
+        articulosCarrito = articulosCarrito.filter(articulo => articulo.id !== articuloId);
+
+        console.log(articulosCarrito);
 
         carritoHTML(); // Iterar sobre el carrito y mostrar su HTML
     }
