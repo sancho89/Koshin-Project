@@ -361,7 +361,17 @@ table {
     margin:10px 0;
 }
 
-
+#vaciar-carrito {
+    margin-top: 5px;
+    margin-left: 50px;
+    margin-right: 50px;
+    text-align: center;
+    background-color: #F62F52;
+    color: #191C24;
+    border: #191C24 solid 1px;
+    border-radius: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
 
 .borrar-curso {
     background-color: red;

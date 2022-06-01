@@ -1,7 +1,7 @@
 // Variables 
 const carrito = document.querySelector('#carrito');
 const contenedorCarrito = document.querySelector('#lista-carrito tbody');
-const vaciarCarrito = document.querySelector('vaciar-carrito');
+const vaciarCarritoBtn = document.querySelector('#vaciar-carrito');
 const listaArticulos = document.querySelector('#lista-articulos');
 let articulosCarrito = [];
 
@@ -14,6 +14,13 @@ function cargarEventListeners() {
 
     // Eliminas el artículo del carrito
     carrito.addEventListener('click', eliminarArticulo);
+
+    // Vaciar carrito
+    vaciarCarritoBtn.addEventListener('click', () => {
+        articulosCarrito = [];
+
+        limpiarHTML();
+    })
 }
 
 // Funciones
@@ -107,16 +114,18 @@ function carritoHTML() {
             </td>
         `;
 
-        // Agregar el HTML al al tbody
+        // Agregar el HTML al tbody
         contenedorCarrito.appendChild(row);
     })
+}
 
-
-    // Elimina los articulos del tbody
-    function limpiarHTML() {
-        contenedorCarrito.innerHTML = '';
-
+// Elimina los articulos del tbody
+function limpiarHTML() {
+        
+    while (contenedorCarrito.firstChild) {
+        contenedorCarrito.removeChild(contenedorCarrito.firstChild)
     }
+
 }
 
 
