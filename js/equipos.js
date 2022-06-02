@@ -18,7 +18,7 @@ divtitulo=prompt('Escribe el nuevo titulo que deseas cambiar','');
 
 if (divtitulo == '') {
     alert('No puedes dejar el titulo vacio, debes introdcir algo')
-    document.getElementById('titulo');
+    
 } else {
     alert('El nuevo titulo es: ' + divtitulo)
 document.getElementById('titulo').innerHTML= divtitulo;
@@ -39,7 +39,25 @@ document.getElementById('parrafo').innerHTML= divparrafo;
 
 }
 
-
-
 }
 
+
+
+const coach = document.getElementById("coach");
+const textoCoach = document.getElementById("text");
+
+// Botones equipo del lol
+
+document.getElementById("botonCoach").onclick=manipularCoach();
+document.getElementById("botonTop").onclick=manipularTop();
+document.getElementById("botonJungle").onclick=manipularJungle();
+document.getElementById("botonMid").click=manipularMid();
+document.getElementById("botonAdc").click=manipularAdc();
+document.getElementById("botonSuplente").click=manipularSuplente();
+
+// Manipular divs del lol
+
+function manipularCoach(){
+    coach.remove();
+    alert('El coach se ha eliminado')
+}
