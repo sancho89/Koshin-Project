@@ -427,7 +427,7 @@ button {
     max-width: 800px;
     max-height: 80vh;
     border-radius: 5px;
-    background: var(--secondary);
+    background: var(--light);
     overflow: auto;
     cursor: default;
   }
@@ -436,8 +436,7 @@ button {
     padding: 1rem;
   }
    
-  .modal-header,
-  .modal-footer {
+  .modal-header {
     background: var(--light);
   }
    

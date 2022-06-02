@@ -1,10 +1,13 @@
 const openEls = document.querySelectorAll("[data-open]");
 const isVisible = "is-visible";
+
+const contenedor = document.getElementById('prim');
  
 for(const el of openEls) {
   el.addEventListener("click", function() {
     const modalId = this.dataset.open;
     document.getElementById(modalId).classList.add(isVisible);
+    document.getElementById(modalId).style.cursor = 'none';
   });
 }
 
@@ -27,3 +30,8 @@ document.addEventListener("click", e => {
       document.querySelector(".modal.is-visible").classList.remove(isVisible);
     }
   });
+
+function borrarDiv(){
+  contenedor.remove();
+  alert("ELEMENTO BORRADO");
+}
