@@ -427,7 +427,7 @@ button {
     max-width: 800px;
     max-height: 80vh;
     border-radius: 5px;
-    background: var(--secondary);
+    background: var(--light);
     overflow: auto;
     cursor: default;
   }
@@ -436,8 +436,7 @@ button {
     padding: 1rem;
   }
    
-  .modal-header,
-  .modal-footer {
+  .modal-header {
     background: var(--light);
   }
    
@@ -499,12 +498,10 @@ input[type="button"] {
   cursor: pointer;
   box-sizing: border-box; }
 .botonTW:hover,
-button:hover,
 input[type="submit"]:hover,
 input[type="reset"]:hover,
 input[type="button"]:hover,
 .botonTW:focus,
-button:focus,
 input[type="submit"]:focus,
 input[type="reset"]:focus,
 input[type="button"]:focus {
@@ -512,7 +509,6 @@ input[type="button"]:focus {
   border-color: #888;
   outline: 0; }
 .botonTW.button-primary,
-button.button-primary,
 input[type="submit"].button-primary,
 input[type="reset"].button-primary,
 input[type="button"].button-primary {
@@ -520,12 +516,10 @@ input[type="button"].button-primary {
   background-color: #33C3F0;
   border-color: #33C3F0; }
 .botonTW.button-primary:hover,
-button.button-primary:hover,
 input[type="submit"].button-primary:hover,
 input[type="reset"].button-primary:hover,
 input[type="button"].button-primary:hover,
 .button.button-primary:focus,
-button.button-primary:focus,
 input[type="submit"].button-primary:focus,
 input[type="reset"].button-primary:focus,
 input[type="button"].button-primary:focus {
@@ -618,34 +612,7 @@ input[type="button"].button-primary:focus {
   
   }
   
-  ul {
-    list-style: circle inside; }
-  ol {
-    list-style: decimal inside; }
-  ol, ul {
-    padding-left: 0;
-    margin-top: 0; }
-  ul ul,
-  ul ol,
-  ol ol,
-  ol ul {
-    margin: 1.5rem 0 1.5rem 3rem;
-    font-size: 90%; }
-  li {
-    margin-bottom: 1rem; }
   
-    th,
-    td {
-      padding: 12px 15px;
-      text-align: left;
-      border-bottom: 1px solid #E1E1E1; }
-    th:first-child,
-    td:first-child {
-      padding-left: 0; }
-    th:last-child,
-    td:last-child {
-      padding-right: 0; }
-    
       
       .botonTW {
         margin-bottom: 1rem; }
