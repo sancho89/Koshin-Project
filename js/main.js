@@ -126,6 +126,99 @@
 
 }
 
+    // Variables tweets
+    const formularioTW = document.querySelector('#formularioTW');
+    const listaTweets = document.querySelector('#lista-tweets');
+    let tweets = [];
+
+    // Event listeners
+
+   eventListeners2();
+    function eventListeners2() {
+        formularioTW.addEventListener('click', agregarTweet);
+
+    }
+
+
+
+    // Funciones
+
+    function agregarTweet(e) {
+        e.preventDefault();
+
+
+        // Texto donde el usuario escribe su mensaje
+        const tweet = document.querySelector('#tweet').value;
+
+        // Validacion 
+        if(tweet === ''){
+            mostrarError2("No puedes enviar texto vacio");
+
+            return;
+        }
+
+        const tweetObj = {
+            id: Date.now(),
+            tweet: tweet
+        }
+
+        // Añadir el texto
+        tweets = [...tweets, tweetObj]
+
+        // Agregamos el html
+        createHTML();
+
+
+    }
+
+        function mostrarError2(error2){
+            const contenido = document.querySelector('#contenido');
+            const mensajeError2 = document.createElement('p2');
+            mensajeError2.textContent = error2;
+            mensajeError2.classList.add('error2');
+            
+            
+            const erorres2 = document.querySelectorAll('.error2');
+            if(erorres2.length === 0) {
+                contenido.appendChild(mensajeError2);
+            }
+            setTimeout(() => {
+                mensajeError2.remove();
+            }, 3000);
+        
+        
+          
+        }
+
+        // Mostrar listado de tweets
+        function createHTML(){
+
+            limpiarHTML();
+
+            if(tweets.length > 0) {
+                tweets.forEach( tweet => {
+
+                    const li = document.createElement('li');
+
+                    li.innerText = tweet.tweet;
+
+                    listaTweets.appendChild(li);
+
+
+                });
+            }
+        }
+
+        function limpiarHTML() {
+            while( listaTweets.firstChild){
+                listaTweets.removeChild(listaTweets.firstChild);
+            }
+        }
+    
+        // reiniciar formulario
+        formularioTW.requestFullscreen()
+
+
 
     // Testimonials carousel
     $('.testimonial-carousel').owlCarousel({
