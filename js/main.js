@@ -37,6 +37,7 @@
     const email = document.querySelector('#emailC');
     const asunto = document.querySelector('#asuntoC');
     const mensaje = document.querySelector('#mensajeC');
+    const er = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
 
     // Funcione 
@@ -50,6 +51,9 @@
     nombre.addEventListener('blur', validarFormulario);
     asunto.addEventListener('blur', validarFormulario);
     mensaje.addEventListener('blur', validarFormulario);
+
+    // Enviado de email
+    formulario.addEventListener('sumbit', enviarEmail)
     
 
     // Funciones
@@ -78,7 +82,7 @@
         }
 
         if(e.target.type === 'email'){
-            const er = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+           
             
             if(er.test( e.target.value)) {
 
@@ -93,9 +97,12 @@
                 
             }
         }
-    if( er.test (email.value)  && asunto.value !== '' && mensaje.value !== '' && nombre.value !== '') {
+    if( er.test( email.value) && asunto.value !== '' && mensaje.value !== '' && nombre.value !== '') {
         btnEnviar.disabled = false;
         btnEnviar.classList.remove('cursor-not-allowed')
+        }else{
+            btnEnviar.disabled = true;
+            btnEnviar.classList.add('cursor-not-allowed')
         }
     
     }
@@ -113,6 +120,11 @@
         
     }
 
+    // Envia el email
+    function enviarEmail(e) {
+        e.preventDefault();
+
+}
 
 
     // Testimonials carousel
