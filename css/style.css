@@ -464,3 +464,7 @@ button {
     visibility: visible;
     opacity: 1;
   }
+
+  #añadir {
+      color: var(--primary);
+  }
