@@ -1,7 +1,7 @@
 const openEls = document.querySelectorAll("[data-open]");
 const isVisible = "is-visible";
 
-const contenedor = document.getElementById('prim');
+const contenedor = document.querySelectorAll("[data-id]");
  
 for(const el of openEls) {
   el.addEventListener("click", function() {
@@ -31,7 +31,9 @@ document.addEventListener("click", e => {
     }
   });
 
-function borrarDiv(){
-  contenedor.remove();
-  alert("ELEMENTO BORRADO");
+for (const el of contenedor){
+  el.addEventListener("click", function() {
+    this.parentElement.parentElement.parentElement.parentElement.remove();
+    alert("ELEMENTO BORRADO");
+  });
 }
