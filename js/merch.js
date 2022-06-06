@@ -141,3 +141,23 @@ $('.testimonial-carousel').owlCarousel({
 });
 
 
+// Modo Admin
+
+const  art1 = document.getElementById("sudaderaAhri");
+
+    document.getElementByID("articulo1").onclick=cambiarArticulo1;
+
+function cambiarArticulo1(){
+        
+    art1=prompt('Introduce el nombre del nuevo artículo','');
+        
+        
+        if (sudaderaAhri == '') {
+            alert('No puedes dejar el nombre del artículo vacio, debes introdcir algo')
+            
+        } else {
+            alert('El nuevo nombre del artículo es: ' + art1)
+        document.getElementById('sudaderaAhri').innerHTML= art1;
+        }
+        
+        }
