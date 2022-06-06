@@ -382,7 +382,7 @@ table {
     font-weight: bold;
 }
 
-th {
+.offcanvas th {
     border-bottom: #F62F52 solid;
     color: #505050;
     text-align: center;
@@ -464,4 +464,3 @@ button {
     visibility: visible;
     opacity: 1;
   }
-
