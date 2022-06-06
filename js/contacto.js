@@ -180,6 +180,8 @@
            }
        }
 
+       
+
        function limpiarHTML() {
            while( listaTweets.firstChild){
                listaTweets.removeChild(listaTweets.firstChild);
@@ -188,6 +190,7 @@
    
        // reiniciar formulario
        formularioTW.requestFullscreen()
+
 
 
   
