@@ -40,7 +40,7 @@ function agregarArticulo(e) {
 // Elimina el articulo del carrito
 function eliminarArticulo(e) {
 
-    if(e.target.classList.contains('borrar-articulo')) {
+    if (e.target.classList.contains('borrar-articulo')) {
         const articuloId = e.target.getAttribute('data-id');
 
         // Eliminar del array por data-id
@@ -121,7 +121,7 @@ function carritoHTML() {
 
 // Elimina los articulos del tbody
 function limpiarHTML() {
-        
+
     while (contenedorCarrito.firstChild) {
         contenedorCarrito.removeChild(contenedorCarrito.firstChild)
     }
@@ -140,25 +140,12 @@ $('.testimonial-carousel').owlCarousel({
     dotsData: true,
 });
 
+// Modo admin
+const articulo = document.querySelectorAll("input");
 
-// Modo Admin
-
-var  nombreArt = document.getElementById("nombreArtUno");
-
-document.getElementByID("articulo1").onclick=cambiarNombre;
-
-
-function cambiarNombre(){
-
-    nombreArt=prompt('Escribe el nombre del artículo nuevo','');
-    
-    
-    if (nombreArt == '') {
-        alert('No puedes dejar el campo vacío, debes introdcir algo')
-        
-    } else {
-        alert('El nuevo titulo es: ' + nombreArt)
-    document.getElementById('nombreArtUno').innerHTML= nombreArt;
-    }
-    
-    }
+for (const art of articulo){
+    art.addEventListener("click", function() {
+      this.parentElement.parentElement.parentElement.remove();
+      alert("ARTÍCULO BORRADO");
+    });
+  }
