@@ -141,3 +141,24 @@ $('.testimonial-carousel').owlCarousel({
 });
 
 
+// Modo Admin
+
+var  nombreArt = document.getElementById("nombreArtUno");
+
+document.getElementByID("articulo1").onclick=cambiarNombre;
+
+
+function cambiarNombre(){
+
+    nombreArt=prompt('Escribe el nombre del artículo nuevo','');
+    
+    
+    if (nombreArt == '') {
+        alert('No puedes dejar el campo vacío, debes introdcir algo')
+        
+    } else {
+        alert('El nuevo titulo es: ' + nombreArt)
+    document.getElementById('nombreArtUno').innerHTML= nombreArt;
+    }
+    
+    }
