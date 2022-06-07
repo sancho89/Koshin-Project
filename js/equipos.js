@@ -1,14 +1,15 @@
 // BORRAR UN DIV (Equipo 1)
 
 
-const contenedor = document.querySelectorAll("[data-id]");
+const caja = document.querySelectorAll("[data-id]");
 
-for (const el of contenedor){
+for (const el of caja){
     el.addEventListener("click", function() {
       this.parentElement.parentElement.parentElement.remove();
       alert("ELEMENTO BORRADO");
     });
   }
+
 
 
 // MODIFICAR EL TITULO Y LA DESCRIPCION DEL EQUIPO (Equipos)
@@ -31,7 +32,7 @@ var nuevotitulo;
 divtitulo=prompt('Escribe el nuevo titulo que deseas cambiar','');
 
 
-if (divtitulo == '') {
+if (divtitulo == '' || divtitulo == null) {
     alert('No puedes dejar el titulo vacio, debes introdcir algo')
     
 } else {
@@ -93,13 +94,18 @@ document.getElementById("botonTextoSupport").onclick=cambiarSupport();
 
 function cambiarCoach(){
     textoCoach=prompt('Escribe el nuevo nombre del coach','');
+    if (textoCoach == '' || textoCoach == null){
+        alert('No puedes dejar un espacio en blanco');
+        textoCoach = '-----';
+        document.getElementById('textoCoach').innerHTML=textoCoach;
+    } else {
     document.getElementById('textoCoach').innerHTML=textoCoach;
-
-    
+    }   
 }
 
 function cambiarTop(){
     textoTop=prompt('Escribe el nuevo nombre del top','');
+    if (textoTop == '' || textoTop == null);
     document.getElementById('textoTop').innerHTML=textoTop;
 
     
@@ -132,3 +138,4 @@ function cambiarSupport(){
 
     
 }
+
