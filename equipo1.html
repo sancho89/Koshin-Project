@@ -54,6 +54,11 @@
     #support2 {
         color: yellow;
     }
+
+    #agregarDiv {
+        background-color: white;
+        
+    }
 </style>
 
 <body>
@@ -91,13 +96,18 @@
     <div class="container-xxl py-5">
         <div class="container">
             <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                
               
                 
                 <img class="img-fluid" src="img/leagueofl.png" alt="">
             </div>
-            <div class="row g-4 justify-content-center">
+            
+            <div class="row g-4 justify-content-center" id="container2">
+                <button id="añadirRol" class="btn btn-outline-danger">Anyadir</button>
+                
                 <div class="col-lg-5 col-md-7 wow fadeInUp p-5" data-wow-delay="0.1s" id="coach">
                     <div class="team-item">
+                        
                         <div class="team-img position-relative overflow-hidden">
                             <img class="img-fluid" src="img/chicalol.png" alt="">
                             
@@ -191,14 +201,15 @@
 
                             
                         </div>
+                        <div id="contenedor"></div>
                         <input type="button" id="botonTextoAdc" value="Modificar ADC" onclick="cambiarAdc();">
     
                         
                     </div>
-                    </div>
+                </div>
 
                 
-
+            
                 <div class="col-lg-5 col-md-7 wow fadeInUp p-5" data-wow-delay="0.1s" id="support">
                     <div class="team-item">
                         <div class="team-img position-relative overflow-hidden">
@@ -217,7 +228,12 @@
                         
                     </div>
                     
+                    
                 </div>
+                
+                
+            
+                
                 
                 
              
@@ -229,6 +245,7 @@
         </div>
         
     </div>
+   
 
     <!-- Team End -->
 
@@ -301,7 +318,7 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
-    <script src="js/equipos.js"></script>
+    <script src="js/equipo1.js"></script>
 </body>
 
 

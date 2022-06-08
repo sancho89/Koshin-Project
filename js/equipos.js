@@ -1,17 +1,16 @@
 // BORRAR UN DIV (Equipo 1)
 
-
-const caja = document.querySelectorAll("[data-id]");
+/*const caja = document.querySelectorAll("[data-id]");
 
 for (const el of caja){
     el.addEventListener("click", function() {
       this.parentElement.parentElement.parentElement.remove();
-      alert("ELEMENTO BORRADO");
+      alert("Se ha eliminado el div");
     });
   }
+  */
 
-
-
+  
 // MODIFICAR EL TITULO Y LA DESCRIPCION DEL EQUIPO (Equipos)
 
 var  divtitulo = document.getElementById("titulo");
@@ -28,17 +27,15 @@ var divparrafo = document.getElementById("parrafo");
 
 
 function cambiarTitulo(){
-var nuevotitulo;
-divtitulo=prompt('Escribe el nuevo titulo que deseas cambiar','');
+    var nuevotitulo;
+    divtitulo=prompt('Escribe el nuevo titulo que deseas cambiar','');
 
-
-if (divtitulo == '' || divtitulo == null) {
-    alert('No puedes dejar el titulo vacio, debes introdcir algo')
-    
-} else {
-    alert('El nuevo titulo es: ' + divtitulo)
-document.getElementById('titulo').innerHTML= divtitulo;
-}
+    if (divtitulo == '' || divtitulo == null) {
+        alert('No puedes dejar el titulo vacio, debes introdcir algo')
+    } else {
+        alert('El nuevo titulo es: ' + divtitulo)
+        document.getElementById('titulo').innerHTML= divtitulo;
+    }
 
 }
 
@@ -57,7 +54,7 @@ document.getElementById('parrafo').innerHTML= divparrafo;
 
 }
 
-
+/*
 // CAMBIAR LOS NOMBRES DE LOS JUGADORES (Equipo 1)
 
 var textoCoach = document.getElementById("textoCoach");
@@ -92,7 +89,7 @@ document.getElementById("botonTextoSupport").onclick=cambiarSupport();
 
 // CAMBIAR EL NOMBRE DE LOS DIVS
 
-function cambiarCoach(){
+/*function cambiarCoach(){
     textoCoach=prompt('Escribe el nuevo nombre del coach','');
     if (textoCoach == '' || textoCoach == null){
         alert('No puedes dejar un espacio en blanco');
@@ -105,37 +102,74 @@ function cambiarCoach(){
 
 function cambiarTop(){
     textoTop=prompt('Escribe el nuevo nombre del top','');
-    if (textoTop == '' || textoTop == null);
-    document.getElementById('textoTop').innerHTML=textoTop;
+    if (textoTop == '' || textoTop == null){
+        alert('No puedes dejar un espacio en blanco');
+        textoTop = '-----';
+        document.getElementById('textoTop').innerHTML=textoTop;
+    } else{
+        document.getElementById('textoTop').innerHTML=textoTop;
 
-    
+    }  
 }
 
 function cambiarJungle(){
     textoJungle=prompt('Escribe el nuevo nombre del jungle','');
-    document.getElementById('textoJungle').innerHTML=textoJungle;
-
-    
+    if (textoJungle == '' || textoJungle == null){
+        alert('No puedes dejar un espacio en blanco');
+        textoJungle = '-----';
+        document.getElementById('textoJungle').innerHTML=textoJungle;
+        
+    } else {
+        document.getElementById('textoJungle').innerHTML=textoJungle
+       
+    } 
 }
 
 function cambiarMid(){
     textoMid=prompt('Escribe el nuevo nombre del mid','');
+    if (textoMid == '' || textoMid == null){
+        alert('No puedes dejar un espacio en blanco');
+        textoMid = '-----';
+        document.getElementById('textoMid').innerHTML=textoMid;
+        
+    }else {
     document.getElementById('textoMid').innerHTML=textoMid;
+    }
 
     
 }
 
 function cambiarAdc(){
     textoAdc=prompt('Escribe el nuevo nombre del adc','');
-    document.getElementById('textoAdc').innerHTML=textoAdc;
-
-    
+    if (textoAdc == '' || textoAdc == null){
+        alert('No puedes dejar un espacio en blanco');
+        textoAdc = '-----';
+        document.getElementById('textoAdc').innerHTML=textoAdc; 
+    }else{
+        document.getElementById('textoAdc').innerHTML=textoAdc; 
+    }
 }
 
 function cambiarSupport(){
     textoSupport=prompt('Escribe el nuevo nombre del support','');
+    if (textoSupport == '' || textoSupport == null){
+        alert('No puedes dejar un espacio en blanco');
+        textoSupport = '-----';
     document.getElementById('textoSupport').innerHTML=textoSupport;
-
     
+    }else {
+        document.getElementById('textoSupport').innerHTML=textoSupport;
+        
+    }
 }
 
+const agregarDiv = document.querySelector('#agregarDiv').onclick=agregarUnDiv();
+const contenedor = document.querySelector('#contenedor');
+
+function agregarUnDiv(){
+contenedor.insertAdjacentHTML('afterend','<p>Hola muy buenas </p>');
+
+}
+
+document
+*/
