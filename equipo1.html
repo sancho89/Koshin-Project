@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>HairCut - Hair Salon HTML Template</title>
+    <title>Koshin Esports</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -31,8 +31,28 @@
     <link href="css/style.css" rel="stylesheet">
 </head>
 <style>
-    #coach {
+    #coach2 {
         color: red;
+    }
+
+    #top2 {
+        color: lightskyblue;
+    }
+
+    #jungle2 {
+        color: green;
+    }
+
+    #mid2 {
+        color: olive;
+    }
+
+    #adc2 {
+        color: orangered;
+    }
+
+    #support2 {
+        color: yellow;
     }
 </style>
 
@@ -66,6 +86,7 @@
      </nav>
      <!-- Navbar End -->
 
+
       <!-- Team Start -->
     <div class="container-xxl py-5">
         <div class="container">
@@ -75,7 +96,7 @@
                 <img class="img-fluid" src="img/leagueofl.png" alt="">
             </div>
             <div class="row g-4 justify-content-center">
-                <div class="col-lg-5 col-md-7 wow fadeInUp p-5" data-wow-delay="0.1s">
+                <div class="col-lg-5 col-md-7 wow fadeInUp p-5" data-wow-delay="0.1s" id="coach">
                     <div class="team-item">
                         <div class="team-img position-relative overflow-hidden">
                             <img class="img-fluid" src="img/chicalol.png" alt="">
@@ -83,16 +104,21 @@
                         </div>
                         <div class="bg-secondary text-center p-5">
                             
-                            <h5 class="text-uppercase">Litros</h5>
-                            <h5 class="text" id="coach">Coach</h5>
-
+                            <h5 class="text-uppercase" id="textoCoach">Litros</h5>
+                            <h5 class="text" id="coach2" >Coach</h5>
+                            <button data-id="1">Borrar</button>
+                            
                             
                         </div>
+                        <input type="button" id="botonTextoMid" value="Modificar Coach" onclick="cambiarCoach();">
+                       
+                        
+                        
                     </div>
                     
                 </div>
 
-                <div class="col-lg-5 col-md-7 wow fadeInUp p-5" data-wow-delay="0.1s">
+                <div class="col-lg-5 col-md-7 wow fadeInUp p-5" data-wow-delay="0.1s" id="top">
                     <div class="team-item">
                         <div class="team-img position-relative overflow-hidden">
                             <img class="img-fluid" src="img/chicalol.png" alt="">
@@ -100,16 +126,19 @@
                         </div>
                         <div class="bg-secondary text-center p-5">
                             
-                            <h5 class="text-uppercase">-----</h5>
-                            <h5 class="text" id="coach">Top</h5>
+                            <h5 class="text-uppercase" id="textoTop">-----</h5>
+                            <h5 class="text" id="top2">Top</h5>
+                            <button data-id="2">BORRAR</button>
 
                             
                         </div>
+                        <input type="button" id="botonTextoTop" value="Modificar Top" onclick="cambiarTop();">
+                        
                     </div>
 
                    
                 </div>
-                <div class="col-lg-5 col-md-7 wow fadeInUp p-5" data-wow-delay="0.1s">
+                <div class="col-lg-5 col-md-7 wow fadeInUp p-5" data-wow-delay="0.1s" id="jungle">
                     <div class="team-item">
                         <div class="team-img position-relative overflow-hidden">
                             <img class="img-fluid" src="img/chicalol.png" alt="">
@@ -117,15 +146,18 @@
                         </div>
                         <div class="bg-secondary text-center p-5">
                             
-                            <h5 class="text-uppercase">Zenoken</h5>
-                            <h5 class="text" id="coach">Jungle</h5>
+                            <h5 class="text-uppercase" id="textoJungle">Zenoken</h5>
+                            <h5 class="text" id="jungle2">Jungle</h5>
+                            <button data-id="3">BORRAR</button>
 
                             
                         </div>
+                        <input type="button" id="botonTextoJungle" value="Modificar Jungle" onclick="cambiarJungle();">
+                        
                     </div>
                   
                 </div>
-                <div class="col-lg-5 col-md-7 wow fadeInUp p-5" data-wow-delay="0.1s">
+                <div class="col-lg-5 col-md-7 wow fadeInUp p-5" data-wow-delay="0.1s" id="mid">
                     <div class="team-item">
                         <div class="team-img position-relative overflow-hidden">
                             <img class="img-fluid" src="img/chicalol.png" alt="">
@@ -133,16 +165,19 @@
                         </div>
                         <div class="bg-secondary text-center p-5">
                             
-                            <h5 class="text-uppercase">Alysza</h5>
-                            <h5 class="text" id="coach">Mid</h5>
+                            <h5 class="text-uppercase" id="textoMid">Alysza</h5>
+                            <h5 class="text" id="mid2">Mid</h5>
+                            <button data-id="4">BORRAR</button>
 
                             
                         </div>
+                        <input type="button" id="botonTextoMid" value="Modificar Mid" onclick="cambiarMid();">
+                     
                     </div>
                     
                 </div>
 
-                <div class="col-lg-5 col-md-7 wow fadeInUp p-5" data-wow-delay="0.1s">
+                <div class="col-lg-5 col-md-7 wow fadeInUp p-5" data-wow-delay="0.1s" id="adc">
                     <div class="team-item">
                         <div class="team-img position-relative overflow-hidden">
                             <img class="img-fluid" src="img/chicalol.png" alt="">
@@ -150,18 +185,21 @@
                         </div>
                         <div class="bg-secondary text-center p-5">
                             
-                            <h5 class="text-uppercase">-----</h5>
-                            <h5 class="text" id="coach">Adc</h5>
+                            <h5 class="text-uppercase" id="textoAdc">-----</h5>
+                            <h5 class="text" id="adc2">Adc</h5>
+                            <button data-id="5">BORRAR</button>
 
                             
                         </div>
+                        <input type="button" id="botonTextoAdc" value="Modificar ADC" onclick="cambiarAdc();">
+    
+                        
                     </div>
-                    
-                </div>
+                    </div>
 
                 
 
-                <div class="col-lg-5 col-md-7 wow fadeInUp p-5" data-wow-delay="0.1s">
+                <div class="col-lg-5 col-md-7 wow fadeInUp p-5" data-wow-delay="0.1s" id="support">
                     <div class="team-item">
                         <div class="team-img position-relative overflow-hidden">
                             <img class="img-fluid" src="img/chicalol.png" alt="">
@@ -169,21 +207,23 @@
                         </div>
                         <div class="bg-secondary text-center p-5">
                             
-                            <h5 class="text-uppercase">Ainzal</h5>
-                            <h5 class="text" id="coach">Supp</h5>
+                            <h5 class="text-uppercase" id="textoSupport">Ainzal</h5>
+                            <h5 class="text" id="support2">Supp</h5>
+                            <button data-id="6">BORRAR</button>
 
                             
                         </div>
+                        <input type="button" id="botonTextoSupport" value="Modificar Support" onclick="cambiarSupport();">
+                        
                     </div>
                     
                 </div>
                 
                 
-               
-               
+             
                 
             </div>
-            <input type="button" id="botonmodificar" value="MODIFICAR DATOS DE LOS JUGADORES (ADMIN)">
+            
             
            
         </div>
