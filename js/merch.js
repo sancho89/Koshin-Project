@@ -40,7 +40,7 @@ function agregarArticulo(e) {
 // Elimina el articulo del carrito
 function eliminarArticulo(e) {
 
-    if(e.target.classList.contains('borrar-articulo')) {
+    if (e.target.classList.contains('borrar-articulo')) {
         const articuloId = e.target.getAttribute('data-id');
 
         // Eliminar del array por data-id
@@ -121,7 +121,7 @@ function carritoHTML() {
 
 // Elimina los articulos del tbody
 function limpiarHTML() {
-        
+
     while (contenedorCarrito.firstChild) {
         contenedorCarrito.removeChild(contenedorCarrito.firstChild)
     }
@@ -140,4 +140,12 @@ $('.testimonial-carousel').owlCarousel({
     dotsData: true,
 });
 
+// Modo admin
+const articulo = document.querySelectorAll("input");
 
+for (const art of articulo){
+    art.addEventListener("click", function() {
+      this.parentElement.parentElement.parentElement.remove();
+      alert("ARTÍCULO BORRADO");
+    });
+  }
