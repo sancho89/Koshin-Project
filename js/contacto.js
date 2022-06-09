@@ -172,9 +172,25 @@
            if(tweets.length > 0) {
                tweets.forEach( tweet => {
 
+
+                // boton eliminar
+                const btnELiminar = document.createElement('a');
+                btnELiminar.classList.add('borrar-tweet');
+                btnELiminar.innerText = 'x';
+
+                // funcion eliminacion 
+
+                btnELiminar.onclick = () => {
+                    borrarTweet(tweet.id);
+                }
+
+
                    const li = document.createElement('li');
 
                    li.innerText = tweet.tweet;
+                
+
+                   li.appendChild(btnELiminar);
 
                    listaTweets.appendChild(li);
 
@@ -183,6 +199,12 @@
            }
        }
 
+       // Eliminacion de tweet
+       function borrarTweet(id) {
+        tweets = tweets.filter (tweet => tweet.id !== id);
+
+            createHTML();
+       }
        
        // Limpia el error
        function limpiarHTML() {
