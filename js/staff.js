@@ -51,7 +51,7 @@ document.querySelector('#añadir').onclick = () => {
   `<div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
   <div class="team-item">
       <div class="team-img position-relative overflow-hidden">
-          <img class="img-fluid" src="img/Yasuo_36.jpg" alt="">
+          <img class="img-NATfluid" src="img/Yasuo_36.jpg" alt="">
           <div class="team-social">
               <div id="btnSobreMi">
                   <a class="btn btn-rectangle open-modal"  data-open="modal9">Sobre Mi</a>

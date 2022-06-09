@@ -10,7 +10,100 @@ for (const el of caja){
 
 
 
-document.querySelector('#añadirRol').onclick = () => {
+document.querySelector('#añadir').onclick = () => {
+
+   let nombreJugador = document.getElementById('nombreJugador').value;
+   let posicionJugador = document.getElementById('posicionJugador').value;
+   
+  
+    document.getElementById('container2').insertAdjacentHTML('beforeend',
+    `<div class="col-lg-5 col-md-7 wow fadeInUp p-5" data-wow-delay="0.1s">
+    <div class="team-item">
+        
+        <div class="team-img position-relative overflow-hidden">
+            <img class="img-fluid" src="img/chicalol.png" alt="">
+            
+        </div>
+        <div class="bg-secondary text-center p-5">
+            
+            <h5 class="text-uppercase" id="textoCoach">` + nombreJugador + `</h5>
+            <h5 class="text" id="coach2" >EEEEEEEEE</h5>
+            <button data-id="1">Borrar</button>
+            
+            
+        </div>
+        <input type="button" id="botonTextoMid" value="Modificar Coach" onclick="cambiarCoach();">
+       
+        
+        
+    </div>
+    
+</div>`);
+  }
+  
+/*document.querySelector('').onclick = () => {
+
+    document.getElementById('container2').insertAdjacentHTML('afterend',
+    `<div class="col-lg-5 col-md-7 wow fadeInUp p-5" data-wow-delay="0.1s" id="coach">
+    <div class="team-item">
+        <div class="team-img position-relative overflow-hidden">
+            <img class="img-fluid" src="img/chicalol.png" alt="">
+            
+        </div>
+        <div class="bg-secondary text-center p-5">
+            
+            <h5 class="text-uppercase" id="textoCoach">Litros</h5>
+            <h5 class="text" id="coach2" >Coach</h5>
+            <button data-id="1">Borrar</button>
+            
+            
+        </div>
+        <input type="button" id="botonTextoMid" value="Modificar" onclick="cambiarCoach();">
+       
+        
+        
+    </div>
+    
+</div>`);
+  }
+  */
+ 
+
+/*document.querySelector('#añadirRol').onclick = () => {
+<button id="añadir" class="btn btn-primary w-100 py-3">Anyadir</button>
+    const nombre = prompt("Escribe el nombre del nuevo staff")
+    const cargo = prompt("Escribe el cargo que ocupa")
+    const sobreM<button id="añadir" class="btn btn-primary w-100 py-3">Anyadir</button>i = prompt("Escribe informacion adicional")
+  
+    document.getElementById('container2').insertAdjacentHTML('beforeend',
+    `<div class="col-lg-5 col-md-7 wow fadeInUp p-5" data-wow-delay="0.1s" id="coach">
+    <div class="team-item">
+        <div class="team-img position-relative overflow-hidden">
+            <img class="img-fluid" src="img/chicalol.png" alt="">
+            
+        </div>
+        <div class="bg-secondary text-center p-5">
+            
+            <h5 class="text-uppercase" id="textoCoach">Litros</h5>
+            <h5 class="text" id="coach2" >Coach</h5>
+            <button data-id="1">Borrar</button>
+            
+            
+        </div>
+        <input type="button" id="botonTextoMid" value="Modificar" onclick="cambiarCoach();">
+       
+        
+        
+    </div>
+    
+</div>`);
+  }
+  */
+
+
+
+
+/*document.querySelector('#añadir').onclick = () => {
 
     document.getElementById('container2').innerHTML += `<div class="col-lg-5 col-md-7 wow fadeInUp p-5" data-wow-delay="0.1s" id="coach">
     <div class="team-item">
@@ -34,6 +127,9 @@ document.querySelector('#añadirRol').onclick = () => {
     
 </div>`;
   }
+  */
+
+
   
 
 
@@ -41,17 +137,25 @@ document.querySelector('#añadirRol').onclick = () => {
 // CAMBIAR LOS NOMBRES DE LOS JUGADORES (Equipo 1)
 
 let textoCoach = document.getElementById("textoCoach");
-let botonTextoCoach = document.getElementById("botonTextoCoach").addEventListener("click", cambiarCoach());
+document.getElementById("botonTextoCoach").onclick=cambiarCoach;
+//let botonTextoCoach = document.getElementById("botonTextoCoach").addEventListener("click", cambiarCoach());
 let textoTop = document.getElementById("textoTop");
-let botonTextoTop = document.getElementById("botonTextoTop").addEventListener("click", cambiarTop());
+//let botonTextoTop = document.getElementById("botonTextoTop").addEventListener("click", cambiarTop());
+document.getElementById("botonTextoTop").onclick=cambiarTop;
+
+
 let textoJungle = document.getElementById("textoJungle");
-let botonTextoJungle = document.getElementById("botonTextoJungle").addEventListener("click", cambiarJungle());
+document.getElementById("botonTextoJungle").onclick=cambiarJungle;
+
 let textoMid = document.getElementById("textoMid");
-let botonTextoMid = document.getElementById("botonTextoMid").addEventListener("click", cambiarMid());
+ document.getElementById("botonTextoMid").onclick=cambiarMid;
+
+
 let textoAdc = document.getElementById("textoAdc");
-let botonTextoAdc = document.getElementById("botonTextoAdc").addEventListener("click", cambiarAdc());
+ document.getElementById("botonTextoAdc").onclick=cambiarAdc;
+
 let textoSupport = document.getElementById("textoSupport");
-let botonTextoSupport = document.getElementById("botonTextoSupport").addEventListener("click", cambiarSupport());
+document.getElementById("botonTextoSupport").onclick=cambiarSupport;
 
 // CAMBIAR EL NOMBRE DE LOS DIVS
 
@@ -124,61 +228,7 @@ function cambiarSupport(){
 }
 
 
-/*function anyadirRol() {
-    let nodoForm = document.querySelector('.container2');
 
-    let nuevoNodo = document.createElement('div');
-
-nuevoNodo.innerHTML = `<div class="col-lg-5 col-md-7 wow fadeInUp p-5" data-wow-delay="0.1s" id="coach">
-<div class="team-item">
-    <div class="team-img position-relative overflow-hidden">
-        <img class="img-fluid" src="img/chicalol.png" alt="">
-        
-    </div>
-    <div class="bg-secondary text-center p-5">
-        
-        <h5 class="text-uppercase" id="textoCoach">Litros</h5>
-        <h5 class="text" id="coach2" >Coach</h5>
-        <button data-id="1">Borrar</button>
-        
-        
-    </div>
-    <input type="button" id="botonTextoMid" value="Modificar" onclick="cambiarCoach();">
-   
-    
-    
-</div>
-
-</div>`
-nodoForm.insertBefore(nuevoNodo, nodoForm.querySelector('#container2'));
-}
-*/
-
-/*function anyadirRol(){
-    let d1 = document.querySelector('#container2');
-    d1.insertAdjacentHTML('afterend' , `<div class="col-lg-5 col-md-7 wow fadeInUp p-5" data-wow-delay="0.1s" id="coach">
-    <div class="team-item">
-        <div class="team-img position-relative overflow-hidden">
-            <img class="img-fluid" src="img/chicalol.png" alt="">
-            
-        </div>
-        <div class="bg-secondary text-center p-5">
-            
-            <h5 class="text-uppercase" id="textoCoach"> Litros</h5>
-            <h5 class="text" id="coach2" >Coach</h5>
-            <button data-id=" ">Borrar</button>
-            
-            
-        </div>
-        <input type="button" id="botonTextoMid" value="Modificar" onclick="cambiarCoach();">
-       
-        
-        
-    </div>
-    
-    </div>`);
-}
-*/
 
 
 
