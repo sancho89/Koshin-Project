@@ -33,7 +33,7 @@
        btnEnviar.classList.add('cursor-not-allowed')
    }
     
-   // Validacion del formulario
+        // Validacion del formulario
    function validarFormulario(e) {
        if(e.target.value.length > 0){
 
@@ -78,6 +78,8 @@
    
    }
 
+   // Muestra error si no se cumple
+
    function mostrarError(mensaje){
        const mensajeMal = document.createElement('p');
        mensajeMal.textContent = mensaje;
@@ -97,7 +99,7 @@
 
 }
 
-   // Variables tweets
+   // Variables foro
    const formularioTW = document.querySelector('#botonTW');
    const listaTweets = document.querySelector('#lista-tweets');
    let tweets = [];
@@ -142,6 +144,7 @@
 
    }
 
+       // Muestra error si no se pone texto
        function mostrarError2(error2){
            const contenido = document.querySelector('#contenido');
            const mensajeError2 = document.createElement('p2');
