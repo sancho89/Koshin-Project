@@ -143,9 +143,9 @@ $('.testimonial-carousel').owlCarousel({
 // Modo admin
 const articulo = document.querySelectorAll("input");
 
-for (const art of articulo){
-    art.addEventListener("click", function() {
-      this.parentElement.parentElement.parentElement.remove();
-      alert("ARTÍCULO BORRADO");
+for (const art of articulo) {
+    art.addEventListener("click", function () {
+        this.parentElement.parentElement.parentElement.remove();
+        // alert("ARTÍCULO BORRADO");
     });
-  }
+}
