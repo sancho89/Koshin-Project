@@ -184,7 +184,7 @@
        }
 
        
-
+       // Limpia el error
        function limpiarHTML() {
            while( listaTweets.firstChild){
                listaTweets.removeChild(listaTweets.firstChild);
