@@ -468,3 +468,10 @@ button {
   #añadir {
       color: var(--primary);
   }
+
+  #añadirArticulo {
+    color: var(--primary);
+    border: var(--primary) solid 3px;
+    margin: auto;
+    background-color: #505050;
+  }

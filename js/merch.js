@@ -141,6 +141,32 @@ $('.testimonial-carousel').owlCarousel({
 });
 
 // Modo admin
+
+// Añadir Artículo
+document.querySelector('#añadirArticulo').onclick = () => {
+
+    const nombreArticulo = prompt("Indica el nombre")
+    const precio = prompt("Indica el precio")
+    
+  
+    document.getElementById('lista-articulos').insertAdjacentHTML('beforeend',
+    `<div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+    <div class="service-item position-relative overflow-hidden bg-secondary d-flex h-100 p-5 ps-0">
+        <div class="d-flex flex-shrink-0 align-items-center justify-content-center"
+            style="width: 180px; height: 180px;">
+            <img class="img-fluid" src="img/ahri">
+        </div>
+        <div class="ps-4">
+            <h3 class="text-uppercase mb-3">` + nombreArticulo + `</h3>
+            <span class="text-uppercase text-primary">` + precio + `</span><br><br>
+            <input type="button" value="Eliminar Articulo">    
+        </div>     
+        <a class="btn btn-square" href="#"><i class="fa fa-plus text-primary button input agregar-carrito" data-id="1"></i></a>
+    </div>
+</div>`);
+  }
+
+// Eliminar
 const articulo = document.querySelectorAll("input");
 
 for (const art of articulo) {
@@ -148,4 +174,6 @@ for (const art of articulo) {
         this.parentElement.parentElement.parentElement.remove();
         // alert("ARTÍCULO BORRADO");
     });
+
+    
 }
