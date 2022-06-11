@@ -1,3 +1,6 @@
+// Hecho por Carlos Sancho Sanfélix
+// Para la realización del código JavaScript seguí los pasos que se indican en el proyecto 15 "Carrito" de los vídeos didácticos de programación, también para los botones de eliminar y añadir artículo me he apoyado en el código de mi compañero Karim
+
 // Variables 
 const carrito = document.querySelector('#carrito');
 const contenedorCarrito = document.querySelector('#lista-carrito tbody');
