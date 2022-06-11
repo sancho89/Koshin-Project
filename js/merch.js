@@ -24,6 +24,8 @@ function cargarEventListeners() {
 }
 
 // Funciones
+
+// Agrega un artículo al carrito
 function agregarArticulo(e) {
     e.preventDefault();
 
@@ -166,7 +168,7 @@ document.querySelector('#añadirArticulo').onclick = () => {
 </div>`);
   }
 
-// Eliminar
+// Eliminar artículo
 const articulo = document.querySelectorAll("input");
 
 for (const art of articulo) {
