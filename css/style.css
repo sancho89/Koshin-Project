@@ -1,3 +1,6 @@
+/* Hecho por Karim Rezgaoui, Kevin Blanco, Carlos Lázaro y Carlos Sancho */
+/* CSS sacado de una plantilla de la web themewagon https://themewagon.com/themes/free-bootstrap-5-html5-responsive-hair-salon-template-haircut/ */
+
 /********** Template CSS #F62F52 **********/
 :root {
     --primary: #F62F52;
@@ -467,4 +470,11 @@ button {
 
   #añadir {
       color: var(--primary);
+  }
+
+  #añadirArticulo {
+    color: var(--primary);
+    border: var(--primary) solid 3px;
+    margin: auto;
+    background-color: #505050;
   }

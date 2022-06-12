@@ -1,3 +1,5 @@
+ <!-- AUTOR: Carlos Lázaro -->
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -34,6 +36,68 @@
     #coach {
         color: red;
     }
+    #meterAlgo{
+        background-color: red;
+    }
+
+    #formulario {
+        float: none;
+        margin: 0 auto;
+    }
+    [data-id]{
+        border: solid white;
+        background-color: red;
+    }
+
+    #coach2 {
+        color: red;
+    }
+
+    #top2 {
+        color: lightskyblue;
+    }
+
+    #jungle2 {
+        color: green;
+    }
+
+    #mid2 {
+        color: olive;
+    }
+
+    #adc2 {
+        color: orangered;
+    }
+
+    #support2 {
+        color: yellow;
+    }
+
+    #agregarDiv {
+        background-color: white;
+        
+    }
+
+    #añadir {
+        color: white;
+        background-color: red;
+    }
+
+    #formulario {
+        float: none;
+        margin: 0 auto;
+    }
+
+    #botonBorrar {
+        border: solid white;
+        background-color: red;
+
+    }
+
+    #posicionNuevoDiv {
+        color: red;
+    }
+
 </style>
 
 <body>
@@ -70,128 +134,147 @@
     <div class="container-xxl py-5">
         <div class="container">
             <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
-                
-                
                 <img class="img-fluid" src="img/valorant.png" alt="">
             </div>
-            <div class="row g-4 justify-content-center">
+
+            <!-- Contenedotes -->
+
+            <div class="row g-4 justify-content-center" id="contenedor">
                 <div class="col-lg-5 col-md-7 wow fadeInUp p-5" data-wow-delay="0.1s">
                     <div class="team-item">
                         <div class="team-img position-relative overflow-hidden">
-                            <img class="img-fluid" src="img/personajevalorant.jpg" alt="">
-                            
+                            <img class="img-fluid" src="img/kay.jpg" alt="" width="500">   
                         </div>
                         <div class="bg-secondary text-center p-5">
                             
-                            <h5 class="text-uppercase">Litros</h5>
-                            <h5 class="text" id="coach">Coach</h5>
+                            <h5 class="text-uppercase" id="textoCoach">Litros</h5>
+                            <h5 class="text" id="coach2">Coach</h5>
                             <button data-id="1">Borrar</button>
                            
                         </div>
-                       
-                       
+                        <input type="button" id="botonTextoCoach" value="Modificar Coach" onclick="cambiarCoach();">
                     </div>
-                   
                 </div>
                 
 
                 <div class="col-lg-5 col-md-7 wow fadeInUp p-5" data-wow-delay="0.1s">
                     <div class="team-item">
                         <div class="team-img position-relative overflow-hidden">
-                            <img class="img-fluid" src="img/personajevalorant.jpg" alt="">
-                            
+                            <img class="img-fluid" src="img/fade.jpg" alt="" width="">  
                         </div>
                         <div class="bg-secondary text-center p-5">
                             
-                            <h5 class="text-uppercase">Litros</h5>
-                            <h5 class="text" id="coach">Coach</h5>
+                            <h5 class="text-uppercase" id="textoTop">.....</h5>
+                            <h5 class="text" id="top2">Top</h5>
                             <button data-id="2">Borrar</button>
                             
                         </div>
-                        
-                        
-                    </div>
-                    
-                    
+                        <input type="button" id="botonTextoTop" value="Modificar Top" onclick="cambiarTop();"> 
+                    </div> 
                 </div>
+
                 <div class="col-lg-5 col-md-7 wow fadeInUp p-5" data-wow-delay="0.1s">
                     <div class="team-item">
                         <div class="team-img position-relative overflow-hidden">
-                            <img class="img-fluid" src="img/personajevalorant.jpg" alt="">
-                            
+                            <img class="img-fluid" src="img/yoru.jpg" alt="1000" width="6000">   
                         </div>
                         <div class="bg-secondary text-center p-5">
                             
-                            <h5 class="text-uppercase">Litros</h5>
-                            <h5 class="text" id="coach">Coach</h5>
+                            <h5 class="text-uppercase" id="textoJungle">Zenoken</h5>
+                            <h5 class="text" id="jungle2">Jungle</h5>
 
                             <button data-id="3">Borrar</button>
                         </div>
-                       
-                        
+                        <input type="button" id="botonTextoJungle" value="Modificar Jungle" onclick="cambiarJungle();">
                     </div>
-
                 </div>
+
                 <div class="col-lg-5 col-md-7 wow fadeInUp p-5" data-wow-delay="0.1s">
                     <div class="team-item">
                         <div class="team-img position-relative overflow-hidden">
-                            <img class="img-fluid" src="img/personajevalorant.jpg" alt="">
-                            
+                            <img class="img-fluid" src="img/omen.jpg" alt="">   
                         </div>
                         <div class="bg-secondary text-center p-5">
                             
-                            <h5 class="text-uppercase">Litros</h5>
-                            <h5 class="text" id="coach">Coach</h5>
+                            <h5 class="text-uppercase" id="textoMid">Alysza</h5>
+                            <h5 class="text" id="mid2">Mid</h5>
                             <button data-id="4">Borrar</button>
                             
                         </div>
-                       
-                        
+                        <input type="button" id="botonTextoMid" value="Modificar Mid" onclick="cambiarMid();">
                     </div>
                 </div>
 
                 <div class="col-lg-5 col-md-7 wow fadeInUp p-5" data-wow-delay="0.1s">
                     <div class="team-item">
                         <div class="team-img position-relative overflow-hidden">
-                            <img class="img-fluid" src="img/personajevalorant.jpg" alt="">
+                            <img class="img-fluid" src="img/cypher.jpeg" alt="">
                             
                         </div>
                         <div class="bg-secondary text-center p-5">
                             
-                            <h5 class="text-uppercase">Litros</h5>
-                            <h5 class="text" id="coach">Coach</h5>
-
+                            <h5 class="text-uppercase" id="textoAdc">-----</h5>
+                            <h5 class="text" id="adc2">ADC</h5>
                             <button data-id="5">Borrar</button>
                         </div>
-                        
-                         
+                        <input type="button" id="botonTextoAdc" value="Modificar ADC" onclick="cambiarAdc();">  
                     </div>
                 </div>
 
                 <div class="col-lg-5 col-md-7 wow fadeInUp p-5" data-wow-delay="0.1s">
                     <div class="team-item">
                         <div class="team-img position-relative overflow-hidden">
-                            <img class="img-fluid" src="img/personajevalorant.jpg" alt="">
+                            <img class="img-fluid" src="img/jett.jpg" alt="">
                             
                         </div>
                         <div class="bg-secondary text-center p-5">
                             
-                            <h5 class="text-uppercase">Litros</h5>
-                            <h5 class="text" id="coach">Coach</h5>
+                            <h5 class="text-uppercase" id="textoSupport">Ainzal</h5>
+                            <h5 class="text" id="support2">Supp</h5>
                             <button data-id="6">Borrar</button>
                             
                         </div>
-                        
-                         
+                        <input type="button" id="botonTextoSupport" value="Modificar Support" onclick="cambiarSupport();">  
                     </div>
-                </div>
-               
-                
-                
+                </div> 
             </div>
         </div>
     </div>
     <!-- Team End -->
+
+    <!-- Formulario Starts -->
+
+
+    <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s" id="formulario">
+        <div class="bg-secondary p-5">
+            <h1 class="text-uppercase mb-4">AGREGAR JUGADOR</h1>
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <div class="form-floating">
+                            <input type="text" class="form-control bg-transparent" id="nombreJugador" placeholder="Nombre">
+                            <label for="name">Nombre</label>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-floating">
+                            <input type="text" class="form-control bg-transparent"  id="posicionJugador" placeholder="Posicion">
+                            <label for="posicion">Posicion</label>
+                        </div>
+                    </div>
+                   
+                    
+                    <div class="col-12" >
+                        
+                        <button id="meterAlgo" class="btn btn-primary w-100 py-3">Enviar</button>
+                        
+                    </div>
+                </div>
+        </div>
+    </div>
+
+    <!-- Formulario End -->
+
+  
 
         <!-- Footer Start -->
     <div class="container-fluid bg-secondary text-light footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">

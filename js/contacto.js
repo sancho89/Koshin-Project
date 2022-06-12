@@ -33,7 +33,7 @@
        btnEnviar.classList.add('cursor-not-allowed')
    }
     
-   // Validacion del formulario
+        // Validacion del formulario
    function validarFormulario(e) {
        if(e.target.value.length > 0){
 
@@ -78,6 +78,8 @@
    
    }
 
+   // Muestra error si no se cumple
+
    function mostrarError(mensaje){
        const mensajeMal = document.createElement('p');
        mensajeMal.textContent = mensaje;
@@ -97,7 +99,7 @@
 
 }
 
-   // Variables tweets
+   // Variables foro
    const formularioTW = document.querySelector('#botonTW');
    const listaTweets = document.querySelector('#lista-tweets');
    let tweets = [];
@@ -142,6 +144,7 @@
 
    }
 
+       // Muestra error si no se pone texto
        function mostrarError2(error2){
            const contenido = document.querySelector('#contenido');
            const mensajeError2 = document.createElement('p2');
@@ -169,9 +172,25 @@
            if(tweets.length > 0) {
                tweets.forEach( tweet => {
 
+
+                // boton eliminar
+                const btnELiminar = document.createElement('a');
+                btnELiminar.classList.add('borrar-tweet');
+                btnELiminar.innerText = 'x';
+
+                // funcion eliminacion 
+
+                btnELiminar.onclick = () => {
+                    borrarTweet(tweet.id);
+                }
+
+
                    const li = document.createElement('li');
 
                    li.innerText = tweet.tweet;
+                
+
+                   li.appendChild(btnELiminar);
 
                    listaTweets.appendChild(li);
 
@@ -180,8 +199,14 @@
            }
        }
 
-       
+       // Eliminacion de tweet
+       function borrarTweet(id) {
+        tweets = tweets.filter (tweet => tweet.id !== id);
 
+            createHTML();
+       }
+       
+       // Limpia el error
        function limpiarHTML() {
            while( listaTweets.firstChild){
                listaTweets.removeChild(listaTweets.firstChild);

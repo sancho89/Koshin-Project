@@ -1,3 +1,6 @@
+// Hecho por Carlos Sancho Sanfélix
+// Para la realización del código JavaScript seguí los pasos que se indican en el proyecto 15 "Carrito" de los vídeos didácticos de programación, también para los botones de eliminar y añadir artículo me he apoyado en el código de mi compañero Karim
+
 // Variables 
 const carrito = document.querySelector('#carrito');
 const contenedorCarrito = document.querySelector('#lista-carrito tbody');
@@ -24,6 +27,8 @@ function cargarEventListeners() {
 }
 
 // Funciones
+
+// Agrega un artículo al carrito
 function agregarArticulo(e) {
     e.preventDefault();
 
@@ -141,11 +146,39 @@ $('.testimonial-carousel').owlCarousel({
 });
 
 // Modo admin
+
+// Añadir Artículo
+document.querySelector('#añadirArticulo').onclick = () => {
+
+    const nombreArticulo = prompt("Indica el nombre")
+    const precio = prompt("Indica el precio")
+    
+  
+    document.getElementById('lista-articulos').insertAdjacentHTML('beforeend',
+    `<div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+    <div class="service-item position-relative overflow-hidden bg-secondary d-flex h-100 p-5 ps-0">
+        <div class="d-flex flex-shrink-0 align-items-center justify-content-center"
+            style="width: 180px; height: 180px;">
+            <img class="img-fluid" src="img/ahri">
+        </div>
+        <div class="ps-4">
+            <h3 class="text-uppercase mb-3">` + nombreArticulo + `</h3>
+            <span class="text-uppercase text-primary">` + precio + `</span><br><br>
+            <input type="button" value="Eliminar Articulo">    
+        </div>     
+        <a class="btn btn-square" href="#"><i class="fa fa-plus text-primary button input agregar-carrito" data-id="1"></i></a>
+    </div>
+</div>`);
+  }
+
+// Eliminar artículo
 const articulo = document.querySelectorAll("input");
 
-for (const art of articulo){
-    art.addEventListener("click", function() {
-      this.parentElement.parentElement.parentElement.remove();
-      alert("ARTÍCULO BORRADO");
+for (const art of articulo) {
+    art.addEventListener("click", function () {
+        this.parentElement.parentElement.parentElement.remove();
+        // alert("ARTÍCULO BORRADO");
     });
-  }
+
+    
+}

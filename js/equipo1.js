@@ -1,5 +1,6 @@
 // AUTOR: Carlos Lázaro
 
+
 // CAMBIAR LOS NOMBRES DE LOS JUGADORES 
 //1. Primero se recogen los ids de los textos y del boton.
 let textoCoach = document.getElementById("textoCoach");
@@ -22,7 +23,6 @@ let textoAdc = document.getElementById("textoAdc");
 
 let textoSupport = document.getElementById("textoSupport");
 document.getElementById("botonTextoSupport").onclick=cambiarSupport;
-
 
 // CAMBIAR LOS NOMBRES DE LOS JUGADORES 
 // 2. Se crea una función para cada posición.
@@ -78,6 +78,7 @@ function cambiarSupport(){
     }
 }
 
+
 // BORRAR UN JUGADOR
 // 1. Se recogen los id de los botones de borrar en uno solo
 // 2. Mediante un for se recorren todos y con la funcion remove se elimina uno por uno.
@@ -90,8 +91,6 @@ for (const el of caja){
     });
 }
 
-
-// AGREGAR NUEVOS MIEMBROS POR MEDIO DE FORMULARIO
 // AGREGAR UN NUEVO MIEMBRO POR MEDIO DE FORMULARIO
 // 1. Se recoge el id del boton, de los valores dentro del formulario 
 // y el id de la zona donde reaparecera el nuevo div
@@ -99,44 +98,52 @@ for (const el of caja){
 // 2. Se inserta el HTML dentro del JavaScript, no puede haber huecos 
 // vacios, validación para su funcionamiento.
 document.querySelector('#meterAlgo').onclick = () => {
+
     const nombre = document.getElementById('nombreJugador').value;
     const posicion = document.getElementById('posicionJugador').value;
-    
+
     if (nombre == '' || posicion == ''){
         alert('No puedes dejar ningún hueco vacio');
-    } else {
-    document.getElementById('contenedor').insertAdjacentHTML('beforeend',`<div class="col-lg-5 col-md-7 wow fadeInUp p-5" data-wow-delay="0.1s" id='nuevoContenedor'>
+    }else{
+
+    document.getElementById('container2').insertAdjacentHTML('beforeend',`<div class="col-lg-5 col-md-7 wow fadeInUp p-5" data-wow-delay="0.1s" id="coach">
     <div class="team-item">
+        
         <div class="team-img position-relative overflow-hidden">
-            <img class="img-fluid" src="img/personajevalorant.jpg" alt="">
+            <img class="img-fluid" src="img/morgana.jpg" alt="1000" width="1000">
             
         </div>
         <div class="bg-secondary text-center p-5">
             
-            <h5 class="text-uppercase" id="nuevoNombre">` + nombre + `</h5>
+            <h5 class="text-uppercase" id="nn">` + nombre + `</h5>
             <h5 class="text" id="posicionNuevoDiv">` + posicion + `</h5>
             <button id="botonBorrar" onclick="borrarNuevosDiv">Borrar</button>
             
+            
         </div>
-        <input type="button" id="botonTextoAdc" value="Modificar ` + posicion + `" onclick="modificarNuevosDivs();">
+        <input type="button" id="botonModificar" value="Modificar ` + posicion + `" onclick="modificarNuevosDivs();">
+       
         
         
     </div>
     
-    
-    </div>`)
+</div>`)
     }
-    
-    
-    };
-    const nombre = document.getElementById('nombreJugador').value;
+};
+
+// MODIFICAR NUEVOS DIVS
+// 1. El javaScript de los nuevos divs agregados por formulario ya no funcionara
+// para ello creamos una funcion para modificar y para borrar (En el HTML insertado en el 
+// JavaScript se crean también las nuevas id de los divs).
+
+const nombre = document.getElementById('nombreJugador').value;
     
     document.getElementById('botonModificar').onclick=modificarNuevosDivs;
     
     function modificarNuevosDivs(){
         
         const nuevoNombree = prompt('Escribe el nuevo nombre del jugador');
-        document.getElementById('nuevoNombre').innerHTML=nuevoNombree;
+        document.getElementById('nn').innerHTML=nuevoNombree;
         
     }
     
@@ -145,7 +152,15 @@ document.querySelector('#meterAlgo').onclick = () => {
     
         document.querySelector('#nuevoContenedor').remove();
     }
-    
+
+
+
+
+
+
+
+
+
 
 
 
