@@ -1,3 +1,5 @@
+//Hecho todo por Karim Rezgaoui
+
 const openEls = document.querySelectorAll("[data-open]");
 const isVisible = "is-visible";
 
