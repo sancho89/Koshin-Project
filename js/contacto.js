@@ -121,8 +121,10 @@
 
 
        // Texto donde el usuario escribe su mensaje
-       const tweet = document.querySelector('#tweet').value;
+       const tweet = document.querySelector('#NombreTW').value + ": \n" + document.querySelector('#tweet').value;
+       
 
+       console.log(tweet);
        // Validacion 
        if(tweet === ''){
            mostrarError2("No puedes enviar texto vacio");
