@@ -145,6 +145,8 @@ document.querySelector('#meterAlgo').onclick = () => {
     
         document.querySelector('#nuevoContenedor').remove();
     }
+
+    
     
 
 
