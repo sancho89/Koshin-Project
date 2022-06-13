@@ -131,6 +131,51 @@ document.querySelector('#meterAlgo').onclick = () => {
     }
 };
 
+
+// AGREGAR UN NUEVO DIV POR MEDIO DE APPEND CHILD (Funciona a medias)
+/*
+document.querySelector('#meterAlgo').onclick=agregarDiv;
+function agregarDiv(){
+    const nombre = document.getElementById('nombreJugador').value;
+    const posicion = document.getElementById('posicionJugador').value;
+
+    if (nombre == '' || posicion == ''){
+        alert('No puedes dejar ningún hueco vacio');
+    }else{
+    const contenedor = document.getElementById('container2');
+    const nuevoDiv = document.createElement('div');
+        nuevoDiv.insertAdjacentHTML('beforeend',`
+        <div class="col-lg-5 col-md-7 wow fadeInUp p-5" data-wow-delay="0.1s" id="coach">
+    <div class="team-item">
+        
+        <div class="team-img position-relative overflow-hidden">
+            <img class="img-fluid" src="img/morgana.jpg" alt="1000" width="1000">
+            
+        </div>
+        <div class="bg-secondary text-center p-5">
+            
+            <h5 class="text-uppercase" id="nn">` + nombre + `</h5>
+            <h5 class="text" id="posicionNuevoDiv">` + posicion + `</h5>
+            <button id="botonBorrar" onclick="borrarNuevosDiv">Borrar</button>
+            
+            
+        </div>
+        <input type="button" id="botonModificar" value="Modificar ` + posicion + `" onclick="modificarNuevosDivs();">
+       
+        
+        
+    </div>
+    
+</div>`);
+
+       
+        contenedor.appendChild(nuevoDiv);
+    }
+
+}
+*/
+
+
 // MODIFICAR NUEVOS DIVS
 // 1. El javaScript de los nuevos divs agregados por formulario ya no funcionara
 // para ello creamos una funcion para modificar y para borrar (En el HTML insertado en el 
