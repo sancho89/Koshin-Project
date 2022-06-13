@@ -140,13 +140,8 @@ document.querySelector('#meterAlgo').onclick = () => {
         
     }
     
-    const btnBorrado = document.getElementById('botonBorrar').onclick=borrarNuevosDivs;
-    function borrarNuevosDivs(){
-    
-        document.querySelector('#nuevoContenedor').remove();
-    }
 
-    
+
     
 
 
